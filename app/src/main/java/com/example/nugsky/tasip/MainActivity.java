@@ -20,7 +20,7 @@ import android.view.MenuItem;
 
 public class MainActivity extends FragmentActivity
         implements NavigationView.OnNavigationItemSelectedListener, HistogramFragment.OnFragmentInteractionListener,
-            FilterFragment.OnFragmentInteractionListener{
+            FilterFragment.OnFragmentInteractionListener,FaceDetectionFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +92,8 @@ public class MainActivity extends FragmentActivity
 
         if (id == R.id.nav_histogram) {
             fragment = new HistogramFragment();
+        } else if (id == R.id.nav_facedetection) {
+            fragment = new FaceDetectionFragment();
         } else {
             fragment = new FilterFragment();
         }
